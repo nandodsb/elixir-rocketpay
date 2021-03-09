@@ -24,6 +24,8 @@ defmodule RocketpayWeb.AccountsController do
 
 
   def transaction(conn, params) do
+
+    Task.async(fn -> Rocketpay.transaction(params end)
     with{:ok, %TransactionResponse{} = transaction} <- Rocketpay.transaction(params) do
       conn
       |> put_status(:ok)
