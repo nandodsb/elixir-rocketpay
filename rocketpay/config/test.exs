@@ -1,4 +1,5 @@
-use Mix.Config
+use Mix.Config, async: true
+
 
 # Configure your database
 #

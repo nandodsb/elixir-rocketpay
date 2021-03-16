@@ -1,5 +1,5 @@
 defmodule RocketpayWeb.ErrorView do
-  use RocketpayWeb, :view
+  use RocketpayWeb, :view, async: true
 
   import Ecto.Changeset, only: [traverse_errors: 2]
 
